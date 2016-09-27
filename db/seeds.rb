@@ -7,12 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 names = ['Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace']
-values = [2,3,4,5,6,7,8,9,10,11,12,13,14]
+values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades']
 deck = Deck.create!
+player1 = Player.create!(name: 'Rob')
+player2 = Player.create!(name: 'Bob')
 
 names.each_with_index do |name, i|
-  suits.each do |suit|
-    Card.create!(name: name, value: values[i], suit: suit, deck_id: deck.id)
+  suits.each_with_index do |suit, idx|
+    Card.create!(name: name, value: values[i], suit: suit, deck_id: deck.id, player_id: (idx % 2) + 1 )
   end
 end
