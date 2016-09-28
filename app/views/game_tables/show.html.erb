@@ -1,0 +1,11 @@
+<div>Dealer Hand:</div>
+<div>unknown</div>
+<div><%= "#{dealer_hand.second.name} of #{dealer_hand.second.suit}" %></div>
+
+
+<br>
+<div>Player Hand:</div>
+<% player_hand.each do |c| %>
+  <div><%= "#{c.name} of #{c.suit}" %></div>
+<% end %>
+total:
