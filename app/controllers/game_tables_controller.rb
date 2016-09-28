@@ -1,10 +1,9 @@
 class GameTablesController < ApplicationController
   def index
     deck = Deck.first
-    cards = Card.where(deck_id: deck.id).shuffle
-    render locals: {
-      cards: cards
-    }
+    cards = deck.cards.shuffle
+
+    render locals: { cards: cards }
   end
 
   def show
