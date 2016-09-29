@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :players
   resources :decks
   resources :cards
+  get '/dashboard/', to: 'dashboard#index'
 
   root 'dashboard#index'
 
