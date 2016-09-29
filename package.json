@@ -69,12 +69,15 @@
     "moment": "^2.14.1",
     "nonce": "^1.0.4",
     "normalize-scss": "^5.0.3",
+    "onchange": "^2.5.0",
     "react": "^15.3.0",
     "react-addons-css-transition-group": "^15.3.0",
     "react-carousel": "^3.3.0",
     "react-dom": "^15.3.0",
     "react-dropzone": "^3.5.3",
     "react-router": "^2.6.1",
-    "react-slick": "^0.13.2"
+    "react-slick": "^0.13.2",
+    "underscore": "^1.8.3",
+    "watchify": "^3.7.0"
   }
 }
